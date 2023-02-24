@@ -9,53 +9,19 @@ html {
 }
 
 /*nav*/
-/* casi me vuelvo chango modificando el nav, pero creo que es de lo mejorcito que me pudo salir
-le puse amor, aunque el resultado parezca un acto de odio*/
+/* Con boostrap pude mejorar mucho el nav, aunque lo tuve que modificar un poquito con mi propio css para que quedara
+mas o menos como yo queria*/
 header {
       background-color: black;
 }
 
 header nav div img {
-      height: 11rem;
-      width: 13rem;
-      padding-bottom: 1rem;
+      width: 10rem;
       margin-left: 4rem;
-      margin-top: 1.3rem;
-}
-
-nav {
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      position: fixed;
-      background-color: black;
-      max-height: 10em;
-      margin-top: 0;
-      width: 100%;    
-}
-
-nav ul {
-      display: flex;
-      flex-direction: row;
-      list-style: none;
-      margin-left: 25em;
-   
 }
 
 nav ul li {
-      margin-left: 2em ;
-
-}
-
-nav ul li a {
-      text-decoration: none;
-      color: grey;
-      font-size: 3rem;
-      font-family: helvetica;
-      
-}
-nav ul li a:hover {
-      color: white;
+      font-size: 2.5rem;
 }
 
 #activo {
@@ -64,7 +30,6 @@ nav ul li a:hover {
       border-bottom-width: 0.3rem;
       border-bottom-style: solid;
 }
-
 
 /*body*/
 
@@ -142,12 +107,47 @@ section p {
 
 /*barra de busqueda vademecum interacciones*/
 
-
+.busquedainteracciones {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      font-size: 10rem;
+      padding-bottom: 10em;
+      padding-left: 0.2em;
+      padding-right: 0.2em;
+      width: auto
+}
+.busquedainteracciones input {
+      width: 62em;
+      height: 3em;
+      border-top-left-radius: 2em;
+      border-bottom-left-radius: 2em;
+      border-style: solid;
+      border-color: black;
+      text-indent: 1rem;
+      border-right-style: none;
+}
+.busquedainteracciones button {
+      height: 3em;
+      width: 3em;
+      border-top-right-radius: 2em;
+      border-bottom-right-radius: 2em;
+      
+}
 
 
 
 /*index*/
+/*evite usar media queries para el responsive, pero en el caso del mapa lo tuve que hacer
+decidi sacarlo para tablets y celulares para mejorar la experiencia del usuario
+*/
 
+@media (max-width: 1024px) {
+      .escondermapita
+      {
+        display: none;
+      }
+}
 
 .mapa {
       border: none;
