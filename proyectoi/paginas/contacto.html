@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="../archivos/iconos/favicon.ico">
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Contacto</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
+        <script src='main.js'></script>   
+    </head>
+    <body>
+        <header id="topup">      
+            <nav>
+                <div class="logo">
+                    <img src="../archivos/iconos/logo.png">
+                </div>
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li> 
+                    <li>
+                        <a href="./interacciones.html">Interacciones</a>
+                    </li>
+                    <li>
+                        <a href="./vademecum.html">Vademecum</a>
+                    </li>
+                    <li>
+                        <a href="./quienes_somos.html">Quienes somos</a>
+                    </li>
+                    <li>
+                        <a href="#" id="activo">Contacto</a>    
+                    </li>
+                    <li>
+                        <a href="#pie">Redes</a>
+                    </li>
+                </ul>
+            </nav>   
+        </header>
+        <section>
+            <article>
+                <h1>Hacenos llegar tu consulta</h1>
+            </article>
+        </section>
+        <form id="contacto"  action="#" method="post" enctype="application/x-www-form-urlencoded">
+            <div class="alinearcontacto">
+                <label for="nombre"> Nombre:<span class="obligatorio">*</span></label>
+                <input type="text" placeholder="Nombre" name="nombre" id="nombre" required>           
+            </div>
+            <div class="alinearcontacto">
+                <label for="apellido"> Apellido:<span class="obligatorio">*</span></label>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+            </div>
+            <div class="alinearcontacto">
+                <label for="email">Email:<span class="obligatorio">*</span></label> 
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="alinearcontacto">
+                <label for="telefono">Telefono:</label> 
+                <input type="number" name="telefono" id="telefono" placeholder="Telefono">
+            </div>
+            <div class="alinearcontacto">
+                <label for="mensaje">Mensaje:<span class="obligatorio">*</span></label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escriba su mensaje aqui" required></textarea>
+            </div>
+            <div class="alinearcontacto"><button id="botoncitocontacto" type="submit">Enviar</button></div>
+            <p id="advertencia"><span class="obligatorio">*</span>Campo obligatorio</p>
+        </form>
+        <footer id="pie">
+            <div class="subir">
+                <a href="#topup" id="subir">Ir arriba</a>
+            </div>
+            <ul>            
+                <li>
+                    <a href="https://www.instagram.com"><img  src="../archivos/iconos/instagram.png" class="icon" > Instagram</a>
+                </li>
+                <li>
+                    <a href="https://www.whatsapp.com"><img  src="../archivos/iconos/whatsapp.png" class="icon"> Whatsapp</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com"><img  src="../archivos/iconos/linkedin.png" class="icon"> LinkedIn</a>
+                </li> 
+            </ul>
+            <div class="derechos">
+                <p>Sitio y logos © 2023 derechos reservados</p>
+            </div>
+        </footer>
+    </body>
+</html>

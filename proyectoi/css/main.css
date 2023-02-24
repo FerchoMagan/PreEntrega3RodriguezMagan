@@ -1,0 +1,285 @@
+html {
+      font-size: 62.5%;
+}
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+/*nav*/
+/* casi me vuelvo chango modificando el nav, pero creo que es de lo mejorcito que me pudo salir
+le puse amor, aunque el resultado parezca un acto de odio*/
+header {
+      background-color: black;
+}
+
+header nav div img {
+      height: 11rem;
+      width: 13rem;
+      padding-bottom: 1rem;
+      margin-left: 4rem;
+      margin-top: 1.3rem;
+}
+
+nav {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      position: fixed;
+      background-color: black;
+      max-height: 10em;
+      margin-top: 0;
+      width: 100%;    
+}
+
+nav ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      margin-left: 25em;
+   
+}
+
+nav ul li {
+      margin-left: 2em ;
+
+}
+
+nav ul li a {
+      text-decoration: none;
+      color: grey;
+      font-size: 3rem;
+      font-family: helvetica;
+      
+}
+nav ul li a:hover {
+      color: white;
+}
+
+#activo {
+      color: rgb(12, 213, 32);
+      border-bottom: red;
+      border-bottom-width: 0.3rem;
+      border-bottom-style: solid;
+}
+
+
+/*body*/
+
+section {
+      padding-top: 10em;
+}
+
+h1 {
+      margin: 1.5em;
+      text-align: center;
+      font-size: 4rem;
+      color: red;
+      font-family: "roboto";
+}
+
+article {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+
+}
+section article h2 {
+      font-family: georgia;
+      font-size: 3rem;
+      text-align: center;
+      padding: 0.5em;
+      margin-top: 2.5em;
+}
+section article h3 {
+      font-family: Verdana;
+      font-size: 2rem;
+      text-indent: 1.4em;
+      padding-left: 5em;
+      margin-top: 2em;
+}
+
+section p {
+
+      font-size: 1.8rem;
+      text-align: justify;
+      padding: 0.5em;
+      text-indent: 1.5em;
+      line-height: 1.4em;
+
+}
+
+/*barra de busqueda vademecum*/
+
+.busquedavademecum {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      font-size: 10rem;
+      padding-bottom: 10em;
+      padding-left: 0.2em;
+      padding-right: 0.2em;
+      width: auto
+}
+.busquedavademecum input {
+      width: 62em;
+      height: 3em;
+      border-top-left-radius: 2em;
+      border-bottom-left-radius: 2em;
+      border-style: solid;
+      border-color: black;
+      text-indent: 1rem;
+      border-right-style: none;
+}
+.busquedavademecum button {
+      height: 3em;
+      width: 3em;
+      border-top-right-radius: 2em;
+      border-bottom-right-radius: 2em;
+      
+}
+
+/*barra de busqueda vademecum interacciones*/
+
+
+
+
+
+/*index*/
+
+
+.mapa {
+      border: none;
+      display: block;
+      margin: auto;
+      width: 100rem;
+      height: 50rem;
+      padding-top: 5em;
+}
+
+/*quienes somos*/
+
+/*se ve un poco esteril, pero no tengo imaginacion*/
+section a {
+      text-decoration: none;
+      font-size: 1.8rem;
+      line-height: 2rem;
+      color: blue;
+
+}
+
+.quienessomos {
+      font-size: 1.8rem;
+      text-align: justify;
+      padding: 0.5em;
+      text-indent: 1.5rem;
+      line-height: 4rem;
+      list-style: square;
+}
+
+/*contacto*/
+
+/*me costo bastante esta parte, lo ire mejorando en proximas entregas a medida que vaya progresando (espero)*/
+
+.obligatorio {
+      color: red;
+      font-size: 1.8rem;
+}
+.alinearcontacto {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+}
+#botoncitocontacto {
+      margin-top: 1em;
+      margin-right: 5em;      
+}
+#contacto {
+      font-size: 2.2rem;	 
+}
+
+#contacto label {
+      width: 10rem;
+	padding: 0.2em;
+	font-size: 1.8rem;
+}
+
+#contacto input {
+      border-radius: 1em;
+	padding: 0.2em;
+	margin: 0.4em;	
+      border: solid;
+      text-indent: 0.5rem;
+}
+
+#contacto button {
+      width: 10rem;
+      margin-left: 17em;
+}
+
+#contacto textarea {
+      border-radius: 1rem;	
+      margin-top: 0.4em;
+      width: 17rem;  
+      text-indent: 0.5rem;
+}
+
+#advertencia {
+      text-align: center;
+      font-size: 1.8rem ;
+      padding: 2em;
+}
+
+/*footer*/
+
+footer {
+      background-color: rgb(127, 118, 105);
+      margin-top: 2em;
+      width: 100%;
+
+}
+
+footer ul {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: left;
+      text-decoration: none;
+      list-style: none;
+      padding-top: 1em;
+}
+
+footer ul li {
+      display: flex;
+      flex-flow: column nowrap;
+      padding-left: 1em;
+      padding-top: 1em;
+      font-size: 2rem;
+}
+
+.derechos {
+      text-align: right; 
+      font-size: 2rem;
+      padding-top: 1em;
+      padding-bottom: 1.5em;
+      padding-right: 0.5em;
+}
+
+.icon {
+      max-width: 2.5rem;
+      border-radius: 0.5rem;      
+      
+}
+
+.subir {
+      text-align: right;
+      font-size: 2rem;
+      padding-right: 2rem;
+      
+}
+
+#pie a {
+      text-decoration: none;
+      color: black;   
+         
+}
