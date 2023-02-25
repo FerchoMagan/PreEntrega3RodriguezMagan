@@ -36,15 +36,22 @@ nav ul li {
 /*body*/
 
 section {
-      padding-top: 8em
+      padding-top: 14em
 }
 
+
 h1 {
-      margin: 1.5em;
       text-align: center;
       font-size: 4rem;
       color: red;
       font-family: "roboto";
+}
+
+/*tuve que aplicar este querie porque en 320 se me rompia el titulo*/
+@media (max-width: 325px) {
+      section h1 {
+            font-size: 3.6rem;
+      }
 }
 
 article {
@@ -53,7 +60,7 @@ article {
 
 }
 section article h2 {
-      font-family: georgia;
+      font-family: Helvetica;
       font-size: 3rem;
       text-align: center;
       padding: 0.5em;
@@ -62,8 +69,7 @@ section article h2 {
 section article h3 {
       font-family: Verdana;
       font-size: 2rem;
-      text-indent: 1.4em;
-      padding-left: 5em;
+      padding-left: 1.5em;
       margin-top: 2em;
 }
 
@@ -71,6 +77,7 @@ section p {
 
       font-size: 1.8rem;
       text-align: justify;
+      font-family: Arial, Helvetica, sans-serif;
       padding: 0.5em;
       text-indent: 1.5em;
       line-height: 1.4em;
@@ -79,12 +86,18 @@ section p {
 
 /*barra de busqueda vademecum*/
 
+/* mejore el aspecto de las barras de busqueda y las separe
+dado que en un futuro van a realizar tareas diferentes
+para la proxima entrega voy a implementar otras mejoras para acercarme mas
+al prototipo
+*/
 .busquedavademecum {
       display: flex;
       flex-flow: row;
       justify-content: center;
       font-size: 2rem;
       padding-bottom: 10em;
+      padding-top: 6em;
       margin-left: 0.5em;
       margin-right: 0.5em;
       
@@ -107,7 +120,7 @@ section p {
       
 }
 
-/*barra de busqueda vademecum interacciones*/
+/*barra de busqueda interacciones*/
 
 .busquedainteracciones {
       display: flex;
@@ -115,6 +128,7 @@ section p {
       justify-content: center;
       font-size: 2rem;
       padding-bottom: 10em;
+      padding-top: 6em;
       margin-left: 0.5em;
       margin-right: 0.5em;
 }
@@ -180,13 +194,15 @@ section a {
 }
 
 /*contacto*/
-
-/*me costo bastante esta parte, lo ire mejorando en proximas entregas a medida que vaya progresando (espero)*/
-
 .obligatorio {
       color: red;
-      font-size: 1.8rem;
 }
+#advertencia {
+      
+      font-size: 1.2rem ;
+      padding: 0.5em;
+}
+/*
 .alinearcontacto {
       display: flex;
       flex-flow: row;
@@ -197,7 +213,7 @@ section a {
       margin-right: 5em;      
 }
 #contacto {
-      font-size: 2.2rem;	 
+      font-size: 1.8rem;	 
 }
 
 #contacto label {
@@ -226,56 +242,76 @@ section a {
       text-indent: 0.5rem;
 }
 
-#advertencia {
-      text-align: center;
-      font-size: 1.8rem ;
-      padding: 2em;
-}
+*/
 
 /*footer*/
+
+/*aca hice la implementacion de grids, para que quedaran alineados como queria
+los iconos de subir con los vinculos de las redes y "derechos"
+ademas los pude alinear combinandolo con flexbox
+creo que el footer me ayudo a entender lo genial de combinar ambas tecnologias
+se que es una "pavada" pero lo puedo llevar a otros items en proyectos futuros
+*/
 
 footer {
       background-color: rgb(127, 118, 105);
       margin-top: 2em;
       width: 100%;
-
+      font-size: 1.5rem;
 }
 
-footer ul {
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: left;
-      text-decoration: none;
-      list-style: none;
-      padding-top: 1em;
-}
-
-footer ul li {
-      display: flex;
-      flex-flow: column nowrap;
-      padding-left: 1em;
-      padding-top: 1em;
-      font-size: 2rem;
-}
-
-.derechos {
-      text-align: right; 
-      font-size: 2rem;
-      padding-top: 1em;
-      padding-bottom: 1.5em;
-      padding-right: 0.5em;
+.gridfoot {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 1em;
+      padding-left: 0.5rem;
+      padding-bottom: 0.5rem;
 }
 
 .icon {
-      max-width: 2.5rem;
+      max-width: 3rem;
       border-radius: 0.5rem;      
       
 }
 
+.whatsapp {
+      grid-column-start: 1;
+      display: flex;
+      align-items: center;
+}
+
+.linkedin {
+      grid-column-start: 1;
+      display: flex;
+      align-items: flex-start
+}
+
+.instagram {
+      grid-column-start: 1;
+      display: flex;
+      align-items: flex-end;
+}
+
+.derechos {
+      grid-column-start: 2;
+      grid-row-start: 3;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 0.5em;
+      
+}
+
 .subir {
-      text-align: right;
-      font-size: 2rem;
-      padding-right: 2rem;
+      grid-column-start: 2;
+      grid-row-start: 1;
+      display: flex;
+      justify-content: right;
+      padding-right: 0.5em;
+      padding-top: 0.5em;    
+}
+.flechita {
+      border-radius: 0.5rem;
+      max-width: 4rem;
       
 }
 
