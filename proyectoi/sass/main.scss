@@ -9,7 +9,15 @@ mas o menos como yo queria y que no se rompa*/
 header {
     background-color: black;
 }
-
+/* esto lo use para que el menu se despliegue completamente
+vi que se puede obtener el mismo resultado modificando el js de bootsrap
+pero no quise modificarlo sin entender que estoy haciendo
+*/
+@media (max-width: 992px) {
+    #menu {
+      height: 100vh;
+   }
+ }
 header nav div img {
     width: 10rem;
     margin-left: 4rem;
