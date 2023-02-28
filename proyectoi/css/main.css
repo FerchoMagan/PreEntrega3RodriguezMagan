@@ -146,11 +146,12 @@ al prototipo
 /*evite usar media queries para el responsive, pero en el caso del mapa lo tuve que hacer
 decidi sacarlo para tablets y celulares para mejorar la experiencia del usuario
 */
-@media (max-width: 1024px) {
-  .escondermapita {
-    display: none;
-  }
-}
+/*@media (max-width: 1024px) {
+    .escondermapita
+    {
+      display: none;
+    }
+}*/
 .mapa {
   border: none;
   display: block;
