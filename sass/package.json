@@ -1,11 +1,18 @@
 {
+<<<<<<< HEAD
   "name": "package",
   "version": "0.0.1",
   "description": "Paquete",
+=======
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "sass del proyecto",
+>>>>>>> 68ecf46eb3e1bb6573e7975fb824d4b8b3785742
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+<<<<<<< HEAD
   "keywords": [
     "Paquete",
     "uno"
@@ -15,4 +22,16 @@
   "dependencies": {
     "sass": "^1.58.3"
   }
+=======
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FerchoMagan/PreEntrega3RodriguezMagan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FerchoMagan/PreEntrega3RodriguezMagan/issues"
+  },
+  "homepage": "https://github.com/FerchoMagan/PreEntrega3RodriguezMagan#readme"
+>>>>>>> 68ecf46eb3e1bb6573e7975fb824d4b8b3785742
 }
