@@ -1,0 +1,18 @@
+{
+  "name": "package",
+  "version": "0.0.1",
+  "description": "Paquete",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Paquete",
+    "uno"
+  ],
+  "author": "fjrodriguezmagan@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.58.3"
+  }
+}
