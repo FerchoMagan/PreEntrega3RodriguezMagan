@@ -1,0 +1,70 @@
+/*barra de busqueda vademecum*/
+
+.busquedavademecum {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 1.8rem;
+    padding-bottom: 10em;
+    padding-top: 6em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+
+    .barravademecum {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-left: 5%;
+        padding-right: 5% ;
+        padding-top: 5%;
+
+        input {
+            width: 80%;
+            height: 3em;
+            border-top-left-radius: 2em;
+            border-bottom-left-radius: 2em;
+            border-style: solid;
+            border-color: black;
+            text-indent: 1rem;
+            border-right-style: none;
+        }
+
+        button {
+            height: 3em;
+            width: 3em;
+            border-top-right-radius: 2em;
+            border-bottom-right-radius: 2em;
+
+        }
+    }
+
+    #imprimir {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 15%;
+
+    }
+
+    #compartir {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        display: flex;
+        position: relative;
+        left: 45%;
+        right: 55%;
+
+    }
+
+    #descargar {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-right: 15%;
+    }
+}

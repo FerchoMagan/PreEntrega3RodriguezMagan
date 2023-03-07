@@ -1,0 +1,150 @@
+
+/*barra de busqueda interacciones*/
+
+.busquedainteracciones {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-size: 2rem;
+    padding-bottom: 10em;
+    padding-top: 6em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+
+    .barrainter {
+        grid-column-start: 1; 
+        grid-row-start: 2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: 5%;
+        
+        input {
+            width: 90%;
+            height: 3em;
+            border-top-left-radius: 2em;
+            border-bottom-left-radius: 2em;
+            border-style: solid;
+            border-color: black;
+            text-indent: 1rem;
+            border-right-style: none;
+        }
+
+        button {
+            height: 3em;
+            width: 3em;
+            border-top-right-radius: 2em;
+            border-bottom-right-radius: 2em;
+        }
+
+
+    }
+
+    #imprimir {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 5rem ;
+
+    }
+
+    #compartir {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    #descargar {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-right: 6rem ;
+        
+    }
+
+    .alertaint {
+        grid-column-start: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3rem;
+    }
+
+
+}
+
+/*Decidi hacer una columna sola con los items para que sea mas sencillo a la hora de usar la version mobile*/
+
+@media (max-width: 991px) {
+    .busquedainteracciones {
+        display: grid;
+        grid-template-columns:1fr;
+        font-size: 1.4rem;
+        padding-bottom: 10em;
+        padding-top: 6em;
+
+        .barrainter {
+            grid-column-start: 1; 
+            grid-row-start: 3;
+            padding-top:3rem;
+            padding-left: 5rem ;
+            padding-right: 5rem ;
+            
+    
+            input {
+                width: 90%;
+                height: 3em;
+                border-top-left-radius: 2em;
+                border-bottom-left-radius: 2em;
+                border-style: solid;
+                border-color: black;
+                text-indent: 1rem;
+                border-right-style: none;
+            }
+    
+            button {
+                height: 3em;
+                width: 3em;
+                border-top-right-radius: 2em;
+                border-bottom-right-radius: 2em;
+            }
+    
+    
+        }
+    
+        #imprimir {
+            grid-column-start: 1;
+            grid-row-start: 1;
+            padding-left: 15% ;
+    
+        }
+    
+        #compartir {
+            grid-column-start: 1;
+            grid-row-start: 1;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+    
+        #descargar {
+            grid-column-start: 1;
+            grid-row-start: 1;
+            padding-right: 15%;
+            padding-bottom: 0;
+        }
+    
+        .alertaint {
+            grid-column-start: 1;
+            grid-row-start: 2;
+            padding-top: 2.5rem;
+        }
+    
+    
+    }
+
+}
