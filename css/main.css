@@ -36,6 +36,11 @@ header nav ul li {
   font-size: 2.5rem;
 }
 
+@media (max-width: 991px) {
+  #menu {
+    height: 100vh;
+  }
+}
 /*footer*/
 /*aca hice la implementacion de grids, para que quedaran alineados como queria
 los iconos de subir con los vinculos de las redes y "derechos"
@@ -295,11 +300,6 @@ footer {
 /* esto lo use para que el menu se despliegue completamente
 vi que se puede obtener el mismo resultado modificando el js de bootsrap
 pero no quise modificarlo sin entender que estoy haciendo */
-@media (max-width: 991px) {
-  #menu {
-    height: 100vh;
-  }
-}
 #activo {
   color: rgb(12, 213, 32);
   border-bottom: red;
