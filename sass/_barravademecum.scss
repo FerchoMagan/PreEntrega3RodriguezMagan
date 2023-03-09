@@ -1,13 +1,8 @@
 /*barra de busqueda vademecum*/
 
 .busquedavademecum {
-    display: grid;
+    @include barras;
     grid-template-columns: 1fr;
-    font-size: 1.8rem;
-    padding-bottom: 10em;
-    padding-top: 6em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
 
     .barravademecum {
         grid-column-start: 1;
@@ -16,25 +11,16 @@
         justify-content: center;
         align-items: flex-end;
         padding-left: 5%;
-        padding-right: 5% ;
+        padding-right: 5%;
         padding-top: 5%;
 
         input {
+            @include inputbarras;
             width: 80%;
-            height: 3em;
-            border-top-left-radius: 2em;
-            border-bottom-left-radius: 2em;
-            border-style: solid;
-            border-color: black;
-            text-indent: 1rem;
-            border-right-style: none;
         }
 
         button {
-            height: 3em;
-            width: 3em;
-            border-top-right-radius: 2em;
-            border-bottom-right-radius: 2em;
+            @include buttonbarras;
 
         }
     }
@@ -53,9 +39,7 @@
         grid-column-start: 1;
         grid-row-start: 1;
         display: flex;
-        position: relative;
-        left: 45%;
-        right: 55%;
+        justify-content: center;
 
     }
 

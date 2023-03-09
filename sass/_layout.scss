@@ -50,6 +50,7 @@ footer {
     grid-column-start: 1;
     display: flex;
     align-items: flex-end;
+    padding-left: 2rem;
 }
 
 
@@ -85,12 +86,12 @@ footer {
     .gridfoot {
         display: grid;
         grid-template-columns: auto;
-        gap: 1em;
-        padding-left: 0.5rem;
-        padding-bottom: 0.5rem;
+        gap: 1em;        
     }
+   
 
     .redes {
+        box-sizing: border-box;
         grid-column-start: 1;
         display: flex;
         justify-content: center;
@@ -98,9 +99,7 @@ footer {
     }
 
     .subir {
-        grid-column-start: 1;
-        display: flex;
-        justify-content: right;
+        grid-column-start: 1;        
         padding-right: 0.5em;
         padding-top: 0.5em;
     }
@@ -110,5 +109,7 @@ footer {
         grid-row-start: 5;
         display: flex;
         justify-content: center;
+        padding-right: 0;
+        
     }
 }
