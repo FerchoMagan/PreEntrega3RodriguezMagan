@@ -5,7 +5,7 @@
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>Interactuando</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -59,36 +59,36 @@
         <section>
             <h1> Analice interacciones medicamentosas</h1>
 
-            <article>
-                <h2>Proposito</h2>
+            <article class="griddiv">
+                <h2 class="titulo1">Proposito</h2>
 
-                <p>Nuestro objetivo es facilitar el acceso a la informacion de las posibles interacciones medicamentosas que pueden llegar a surgir en la prescripcion
+                <p class="textoizquierda">Nuestro objetivo es facilitar el acceso a la informacion de las posibles interacciones medicamentosas que pueden llegar a surgir en la prescripcion
                 los cuales evaluaran los riesgos/beneficios de las interacciones que puedan surgir y para nada deberia tomarse como algo definitivo sino como una guia. 
                 de medicamentos, y para un mejor control en el momento de dispensa en farmacias por personal calificado. La informacion que aqui se muestre esta unicamente enfocada para profesionales de la salud
                 </p>
-            </article>
-    
-            <article>
-                <h2> Como utilizar las funciones de busqueda</h2>
+                <div id="paciente" class="imagencentrada"><img src="./archivos/imagenes/enfermera-paciente.avif" class="imagengeneral"></div> 
+            
+                <h2 class="titulo2"> Como utilizar las funciones de busqueda</h2>
                 
-                <p> 
+                <p class="textocentrado"> 
                 Ya sea utilizando nuestro vademecum, como nuestro buscador de interacciones, es muy sencillo! 
                 </p>
                 
-                <h3>-Vademecum</h3>
+                <h3 class="titulo3">-Vademecum</h3>
                 
-                <p>
+                <p class="textoizquierda1">
                 Ingresa el principio activo o marca a buscar, una vez realizado, se desplegara la lista con los resultados. Selecciona el que se ajuste
                 a tu busqueda y consulta la informacion que buscabas!
                 </p>
                 
-                <h3>-Interacciones</h3>
+                <h3 class="titulo4">-Interacciones</h3>
                 
-                <p>
+                <p class="textoizquierda2">
                 Ingresa un minimo de dos principios activos que desees consultar de que manera se desempeñan, una vez elegidos podras ver en pantalla
                 su compatibilidad y podras evaluar si administrarlos concomitantemente o probar una nueva combinacion.
-                </p>
+                </p><div class="medicacion imagencentrada"><img src="./archivos/imagenes/farmacia.jpg" class='imagengeneral farmacia'></div>
             </article>
+            </div>
             <!--
                 Ahora el iframe lo deje adaptado a mobile y tablets
             -->
@@ -113,19 +113,22 @@
             <!--desisti de tener una lista y me enfoque en divs
             consegui el proposito de alinear todo con grids y flex (con esfuerzo)
             aprendi cosas asi que eso me pone contento-->  
-            <div class="gridfoot">        
-                <div class="redes">
-                    <a href="https://www.instagram.com"><img alt="instagram" src="./archivos/iconos/instagram.png" class="icon"> Instagram</a>
+            <div class="gridfoot">
+                <div class="gridfootred">        
+                    <div class="redes insta">
+                        <a href="https://www.instagram.com"><img alt="instagram" src="./archivos/iconos/instagram.png" class="icon"> Instagram</a>
+                    </div>
+                    <div class="redes wp">
+                        <a href="https://www.whatsapp.com"><img alt="whatsapp" src="./archivos/iconos/whatsapp.png" class="icon"> Whatsapp</a>        
+                    </div>
+                    <div class="redes linkedin">
+                        <a href="https://www.linkedin.com"><img alt="linkedin" src="./archivos/iconos/linkedin.png" class="icon"> LinkedIn</a>
+                    </div>   
                 </div>
-                <div class="redes">
-                    <a href="https://www.whatsapp.com"><img alt="whatsapp" src="./archivos/iconos/whatsapp.png" class="icon"> Whatsapp</a>        
-                </div>
-                <div class="redes">
-                    <a href="https://www.linkedin.com"><img alt="linkedin" src="./archivos/iconos/linkedin.png" class="icon"> LinkedIn</a>
-                </div>   
                 <div class="subir">
                     <a href="#topup" id="subir"><img class="flechita" alt="flecha,subir" src="./archivos/iconos/this-up.gif"></a>
-                 </div>
+                </div>
+                
                 <div class="derechos">
                     <p>Sitio y logos © 2023 derechos reservados</p>
                 </div>

@@ -4,6 +4,8 @@ html {
 
 .icon {
   max-width: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
   border-radius: 0.5rem;
 }
 
@@ -19,6 +21,109 @@ html {
 .iconoalerta {
   width: 60%;
   height: 5rem;
+}
+
+/* grids del index */
+.griddiv {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(8, auto);
+  grid-template-areas: "A A" "B C" "A1 A1" "B1 B1" "A2 D" "B2 D" "A3 D" "B3 D";
+}
+
+.titulo1 {
+  grid-area: A;
+}
+
+.textoizquierda {
+  grid-area: B;
+}
+
+.paciente {
+  grid-area: C;
+}
+
+.titulo2 {
+  grid-area: A1;
+}
+
+.textocentrado {
+  grid-area: B1;
+}
+
+.titulo3 {
+  grid-area: A2;
+}
+
+.textoizquierda1 {
+  grid-area: B2;
+}
+
+.titulo4 {
+  grid-area: A3;
+}
+
+.textoizquierda2 {
+  grid-area: B3;
+}
+
+.medicacion {
+  grid-area: D;
+}
+
+@media (max-width: 991px) {
+  .griddiv {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "A" "B" "C" "A1" "B1" "A2" "B2" "A3" "B3" "D";
+  }
+  .imagencentrada {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*grids quienes somos*/
+.griddiv2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: "quienes quienes" "textoquienes imagenquienes";
+}
+
+.quienes {
+  grid-area: quienes;
+}
+
+.textoizquierdaquienes {
+  grid-area: textoquienes;
+}
+
+.ciencia {
+  grid-area: imagenquienes;
+}
+
+@media (max-width: 991px) {
+  .griddiv2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "quienes" "textoquienes" "imagenquienes";
+  }
+  .imagencentrada {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.imagengeneral {
+  width: 30rem;
+  padding-right: 2rem;
+}
+
+.farmacia {
+  height: 25rem;
+  margin-top: 6rem;
 }
 
 /*nav*/
@@ -75,7 +180,7 @@ footer {
 }
 .gridfoot .derechos {
   grid-column-start: 2;
-  grid-row-start: 3;
+  grid-row-start: 2;
   display: flex;
   justify-content: flex-end;
   padding-right: 0.5em;
@@ -94,18 +199,19 @@ para que el contenido no centrara a mitad de palabra
 sino que arranque desde la primer letra, pero no
 lo pude lograr
 */
+/*Consegui el objetivo de centrado!
+*/
 @media (max-width: 991px) {
   .gridfoot {
     display: grid;
     grid-template-columns: auto;
     gap: 1em;
   }
-  .gridfoot .redes {
-    grid-column-start: 1;
+  .gridfoot .gridfootred {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: flex-start;
   }
   .gridfoot .subir {
     grid-column-start: 1;
@@ -115,9 +221,9 @@ lo pude lograr
   .gridfoot .derechos {
     grid-column-start: 1;
     padding-right: 0;
-    grid-row-start: 5;
+    grid-row-start: 3;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
   }
 }
@@ -330,6 +436,9 @@ section h1 {
 section article {
   display: grid;
 }
+section article .sinindentado {
+  text-indent: 0;
+}
 section article iframe {
   display: block;
   border: none;
@@ -343,6 +452,7 @@ section article p {
   text-align: justify;
   font-family: "helvetica";
   padding: 0.5em;
+  padding-left: 1em;
   text-indent: 1.5em;
   line-height: 1.4em;
 }
@@ -357,26 +467,21 @@ section article h2 {
   font-size: 3rem;
   text-align: center;
   padding: 0.5em;
-  margin-top: 2.5em;
+  margin-top: 1.8em;
 }
 
-/*tuve que aplicar este querie porque en 320 se me rompia el titulo*/
-@media (max-width: 325px) {
-  article {
+/*tuve que aplicar este querie para la version
+mobile para evitar demasiado espacio entre el
+titulo y el nav bar*/
+@media (max-width: 991px) {
+  section {
+    padding-top: 7em;
+  }
+  section article {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
 }
-/*quienes somos*/
-/*se ve un poco esteril, pero no tengo imaginacion*/
-.quienessomos {
-  font-size: 1.8rem;
-  text-align: justify;
-  padding: 0.5em;
-  text-indent: 1.5rem;
-  line-height: 4rem;
-}
-
 /*contacto*/
 .obligatorio {
   color: red;

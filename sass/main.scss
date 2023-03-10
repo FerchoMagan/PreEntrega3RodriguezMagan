@@ -3,11 +3,14 @@ $fuentehelv : 'helvetica';
 html {
     font-size: 62.5%;
 }
-@import 'iconos';
-@import 'mixins';
-@import 'layout';
-@import 'barrainteraccion';
-@import 'barravademecum';
+
+@import 'imports/iconos';
+@import 'imports/gridspaginas';
+@import 'imports/imagenes';
+@import 'imports/mixins';
+@import 'imports/layout';
+@import 'imports/barrainteraccion';
+@import 'imports/barravademecum';
 
 /*El normalizer esta incluido en el css de boostrap*/
 
@@ -29,6 +32,7 @@ pero no quise modificarlo sin entender que estoy haciendo */
 /*body*/
 
 section {
+
     padding-top: 14em;
 
     a {
@@ -36,8 +40,8 @@ section {
         font-size: 1.8rem;
         line-height: 2rem;
         color: blue;
-
     }
+
 
     h1 {
         text-align: center;
@@ -48,7 +52,10 @@ section {
 
     article {
         display: grid;
-
+        
+        .sinindentado {
+            text-indent: 0;
+        }
         iframe {
             display: block;
             border: none;
@@ -63,8 +70,11 @@ section {
             text-align: justify;
             font-family: $fuentehelv;
             padding: 0.5em;
+            padding-left: 1em;
             text-indent: 1.5em;
             line-height: 1.4em;
+
+            
         }
 
         h3 {
@@ -79,35 +89,31 @@ section {
             font-size: 3rem;
             text-align: center;
             padding: 0.5em;
-            margin-top: 2.5em;
+            margin-top: 1.8em;
         }
     }
 }
 
 
 
-/*tuve que aplicar este querie porque en 320 se me rompia el titulo*/
-@media (max-width: 325px) {
-    article {
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
+/*tuve que aplicar este querie para la version
+mobile para evitar demasiado espacio entre el
+titulo y el nav bar*/
+@media (max-width: 991px) {
+    section {
+        padding-top: 7em;
+
+        article {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+
+        }
 
     }
+
+
 }
 
-
-/*quienes somos*/
-
-/*se ve un poco esteril, pero no tengo imaginacion*/
-
-.quienessomos {
-    font-size: 1.8rem;
-    text-align: justify;
-    padding: 0.5em;
-    text-indent: 1.5rem;
-    line-height: 4rem;
-    
-}
 
 /*contacto*/
 

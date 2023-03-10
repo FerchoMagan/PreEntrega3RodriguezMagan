@@ -7,6 +7,13 @@
     margin-right: 0.5em;
 }
 
+@mixin imagenescentro {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin inputbarras {
     height: 3em;
     border-top-left-radius: 2em;

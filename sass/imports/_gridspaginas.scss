@@ -1,0 +1,105 @@
+@import 'mixins';
+
+/* grids del index */
+.griddiv {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas:
+        'A A'
+        'B C'
+        'A1 A1'
+        'B1 B1'
+        'A2 D'
+        'B2 D'
+        'A3 D'
+        'B3 D'
+    ;
+
+}
+
+.titulo1 {
+    grid-area: A;
+}
+
+.textoizquierda {
+    grid-area: B;
+}
+
+.paciente {
+    grid-area: C;
+}
+
+.titulo2 {
+    grid-area: A1;
+}
+
+.textocentrado {
+    grid-area: B1;
+}
+
+.titulo3 {
+    grid-area: A2;
+}
+
+.textoizquierda1 {
+    grid-area: B2;
+}
+
+.titulo4 {
+    grid-area: A3;
+}
+
+.textoizquierda2 {
+    grid-area: B3;
+}
+
+.medicacion {
+    grid-area: D;
+}
+
+@media (max-width: 991px) {
+    .griddiv {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: "A""B"
+            "C""A1""B1""A2""B2""A3""B3""D"
+    }
+
+    .imagencentrada {
+        @include imagenescentro;
+    }
+}
+
+/*grids quienes somos*/
+
+.griddiv2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 'quienes quienes'
+        'textoquienes imagenquienes';
+}
+
+.quienes {
+    grid-area: quienes;
+}
+
+.textoizquierdaquienes {
+    grid-area: textoquienes;
+
+}
+
+.ciencia {
+    grid-area: imagenquienes;
+}
+@media (max-width: 991px) {
+    .griddiv2 {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: "quienes" "textoquienes" "imagenquienes"
+    }
+
+    .imagencentrada {
+        @include imagenescentro;
+    }
+}
