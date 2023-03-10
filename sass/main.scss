@@ -11,6 +11,7 @@ html {
 @import 'imports/layout';
 @import 'imports/barrainteraccion';
 @import 'imports/barravademecum';
+@import 'imports/keyframes';
 
 /*El normalizer esta incluido en el css de boostrap*/
 
@@ -106,7 +107,9 @@ titulo y el nav bar*/
         article {
             margin-top: 0.5em;
             margin-bottom: 0.5em;
-
+            p {
+                padding-right: 1em;
+            }
         }
 
     }

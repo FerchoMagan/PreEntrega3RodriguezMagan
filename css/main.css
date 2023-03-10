@@ -193,6 +193,16 @@ footer {
   padding-right: 0.5em;
   padding-top: 0.5em;
 }
+.gridfoot .subir .flechita {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid black;
+  animation-name: subir;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
 
 /*Intente literalmente 1000 maneras de alinear las redes
 para que el contenido no centrara a mitad de palabra
@@ -406,6 +416,17 @@ lo pude lograr
   padding-right: 15%;
 }
 
+@keyframes subir {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 /*El normalizer esta incluido en el css de boostrap*/
 /* esto lo use para que el menu se despliegue completamente
 vi que se puede obtener el mismo resultado modificando el js de bootsrap
@@ -480,6 +501,9 @@ titulo y el nav bar*/
   section article {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+  }
+  section article p {
+    padding-right: 1em;
   }
 }
 /*contacto*/
