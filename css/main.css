@@ -36,22 +36,23 @@ header nav ul li {
   font-size: 2.5rem;
 }
 
+/*lo estuve probando en el telefono y la verdad
+que el nav quedaba gigante asi que decidi poner a 
+la mitad el img para mobile*/
 @media (max-width: 991px) {
+  /*despliegue del menu a pantalla completa*/
   #menu {
     height: 100vh;
   }
+  header nav div img {
+    width: 5rem;
+    margin-left: 4rem;
+  }
 }
 /*footer*/
-/*aca hice la implementacion de grids, para que quedaran alineados como queria
-los iconos de subir con los vinculos de las redes y "derechos"
-ademas los pude alinear combinandolo con flexbox
-creo que el footer me ayudo a entender lo genial de combinar ambas tecnologias
-se que es una "pavada" pero lo puedo llevar a otros items en proyectos futuros
-*/
 footer {
   background-color: rgb(127, 118, 105);
   margin-top: 2em;
-  width: 100%;
   font-size: 1.5rem;
 }
 
@@ -62,23 +63,24 @@ footer {
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
 }
-
-.redes {
+.gridfoot a {
+  text-decoration: none;
+  color: black;
+}
+.gridfoot .redes {
   grid-column-start: 1;
   display: flex;
   align-items: flex-end;
   padding-left: 2rem;
 }
-
-.derechos {
+.gridfoot .derechos {
   grid-column-start: 2;
   grid-row-start: 3;
   display: flex;
   justify-content: flex-end;
   padding-right: 0.5em;
 }
-
-.subir {
+.gridfoot .subir {
   grid-column-start: 2;
   grid-row-start: 1;
   display: flex;
@@ -87,34 +89,36 @@ footer {
   padding-top: 0.5em;
 }
 
-#pie a {
-  text-decoration: none;
-  color: black;
-}
-
+/*Intente literalmente 1000 maneras de alinear las redes
+para que el contenido no centrara a mitad de palabra
+sino que arranque desde la primer letra, pero no
+lo pude lograr
+*/
 @media (max-width: 991px) {
   .gridfoot {
     display: grid;
     grid-template-columns: auto;
     gap: 1em;
   }
-  .redes {
-    box-sizing: border-box;
+  .gridfoot .redes {
     grid-column-start: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
   }
-  .subir {
+  .gridfoot .subir {
     grid-column-start: 1;
     padding-right: 0.5em;
     padding-top: 0.5em;
   }
-  .derechos {
+  .gridfoot .derechos {
     grid-column-start: 1;
+    padding-right: 0;
     grid-row-start: 5;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
-    padding-right: 0;
   }
 }
 /*barra de busqueda interacciones*/
@@ -371,7 +375,6 @@ section article h2 {
   padding: 0.5em;
   text-indent: 1.5rem;
   line-height: 4rem;
-  list-style: square;
 }
 
 /*contacto*/
