@@ -1,7 +1,10 @@
 /*nav*/
-header {
-    background-color: black;
-
+/* necesitaba el header por encima del nav en para que al apretar la animacion
+de flechita la pagina llegara arriba de todo asi que hice uso del position
+absolute en este caso*/
+ header {
+        position: absolute;
+        top: 0;
     nav {
         div img {
             width: 10rem;
@@ -17,8 +20,14 @@ header {
         }
 
     }
+ }
+ 
+ #activo {
+    color: rgb(12, 213, 32);
+    border-bottom: red;
+    border-bottom-width: 0.3rem;
+    border-bottom-style: solid;
 }
-
 /*lo estuve probando en el telefono y la verdad
 que el nav quedaba gigante asi que decidi poner a 
 la mitad el img para mobile*/
@@ -29,7 +38,7 @@ la mitad el img para mobile*/
         height: 100vh;
     }
 
-    header nav div img {
+   header nav div img {
         width: 5rem;
         margin-left: 4rem;
     }
@@ -86,22 +95,12 @@ footer {
             border-left: 30px solid transparent;
             border-right: 30px solid transparent;
             border-bottom: 30px solid black;
-            animation-name: subir;
+            animation-name: paraarriba;
             animation-iteration-count: infinite;
             animation-duration: 1s;
         }
     }
 }
-
-
-
-
-
-/*Intente literalmente 1000 maneras de alinear las redes
-para que el contenido no centrara a mitad de palabra
-sino que arranque desde la primer letra, pero no
-lo pude lograr
-*/
 
 /*Consegui el objetivo de centrado!
 */

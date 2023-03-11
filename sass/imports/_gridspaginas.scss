@@ -1,5 +1,10 @@
 @import 'mixins';
 
+/*Aca decidi incorporar todos los grids para evitar que los demas scss quedaran 
+excesivamente largos, ademas lo mezcle un poco con mixin de imagenes ahorrandome 
+un poco de codigo, es bastante comodo*/
+
+
 /* grids del index */
 .griddiv {
     display: grid;

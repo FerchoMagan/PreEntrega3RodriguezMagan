@@ -1,8 +1,12 @@
+/*Aprooveche el uso de los mixins sobre todo en el uso de las barras
+porque es donde mas se me reiteraba codigo, lo implemente tambien
+para centrar las imagenes en distintas paginas */
+
 @mixin barras {
     display: grid;
     font-size: 2rem;
     padding-bottom: 25em;
-    padding-top: 6em;
+    padding-top: 6rem;
     margin-left: 0.5em;
     margin-right: 0.5em;
 }
