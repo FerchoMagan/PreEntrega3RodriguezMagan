@@ -1,14 +1,17 @@
-redes<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="icon" type="image/x-icon" href="../Archivos/Iconos/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="../Archivos/Iconos/favicon.ico" alt="favicon, icono">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Interaccion medicamentos</title> 
+        <meta name="description" content="Busca interacciones de medicamentos en nuestro buscador y asi evitar interacciones no deseadas.">
+        <meta name="keywords" content="interaccion medicamentos, efectos adversos, interaccion farmacos, contraindicacion, salud">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
-        <title>Interacciones medicamentosas</title>    
+           
     </head>
     <body>
         <header id="topup"> 
@@ -59,41 +62,47 @@ redes<!DOCTYPE html>
             <div class="barrainter">
                 <input type="search" placeholder="Busqueda de interacciones">
                 <button type="submit">
-                <i class="fa fa-search"></i>
-            </button>
+                    <i class="fa fa-search"></i>
+                </button>
            </div> 
-           <!--Los iconos van a cumplir la funcion de sus respectivos logos, cuando aprenda a programar
+           <!--Los iconos van a cumplir la funcion de sus respectivos logos, cuando aprenda
+            js
             -->
             <div id="imprimir">
-                <img src="../archivos/iconos/print.png" class="iconobar" alt="">
+                <img src="../archivos/iconos/print.png" class="iconobar" alt="imprimir">
             </div>
             <div id="compartir" >
-                <img src="../archivos/iconos/share.png" class="iconobar" alt="">
+                <img src="../archivos/iconos/share.png" class="iconobar" alt="compartir">
             </div>
             <div id="descargar">
-                <img src="../archivos/iconos/download.png" class="iconobar"  alt="">
+                <img src="../archivos/iconos/download.png" class="iconobar" alt="descargar">
             </div>
-            <!--La imagen es a modo ilustrativo, aca va a ir la respuesta a si hay o no interaccion. Supongo que lo 
-            lograre con js-->
-            <div class="alertaint"><img class="iconoalerta" src="../archivos/iconos/interaccion.jfif"></div>
+            <!--La imagen es a modo ilustrativo, de donde aparecera la alerta de interaccion, la idea es que
+            sea roja o verde segun haya o no interaccion y que debajo de la barra haya una breve descripcion
+            de los posibles riesgos (en caso de que hayan) del uso concomitante de los medicamentos
+            -->
+            <div class="alertaint">
+                <img class="iconoalerta" src="../archivos/iconos/interaccion.jfif" alt="alerta de interaccion">
+            </div>
 
         </form>
         <footer id="pie">
         
             <div class="gridfoot">
-                          
-                <div class="redes">
-                    <a href="https://www.instagram.com"><img alt="instagram" src="../archivos/iconos/instagram.png" class="icon"> Instagram</a>
-                </div>
-                <div class="redes">
-                    <a href="https://www.whatsapp.com"><img alt="whatsapp" src="../archivos/iconos/whatsapp.png" class="icon"> Whatsapp</a>        
-                </div>
-                <div class="redes">
-                    <a href="https://www.linkedin.com"><img alt="linkedin" src="../archivos/iconos/linkedin.png" class="icon"> LinkedIn</a>
+                <div class="gridfootred">        
+                    <div class="redes insta">
+                        <a href="https://www.instagram.com"><img alt="instagram" src="../archivos/iconos/instagram.png" class="icon"> Instagram</a>
+                    </div>
+                    <div class="redes wp">
+                        <a href="https://www.whatsapp.com"><img alt="whatsapp" src="../archivos/iconos/whatsapp.png" class="icon"> Whatsapp</a>        
+                    </div>
+                    <div class="redes linkedin">
+                        <a href="https://www.linkedin.com"><img alt="linkedin" src="../archivos/iconos/linkedin.png" class="icon"> LinkedIn</a>
+                    </div>   
                 </div>   
                 <div class="subir">
-                    <a href="#topup" id="subir"><img class="flechita" alt="flecha,subir" src="../archivos/iconos/this-up.gif"></a>
-                 </div>
+                    <a href="#topup"><div class="flechita"></div></a>
+                </div>
                 <div class="derechos">
                     <p>Sitio y logos © 2023 derechos reservados</p>
                 </div>

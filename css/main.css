@@ -1,15 +1,18 @@
+/*en el main decidi poner solo estilos de sections p h1 etc para que 
+me resulte mas comodo el manejo de estilos, fueron agregados todos los
+imports necesarios para que se conecten una vez compilado scss*/
 html {
   font-size: 62.5%;
 }
 
+/*En este apartado gestione la parte de formato de iconos para que no
+me fuera tan engorroso buscar por todos lados cuando tuviera que modificar
+o agregar un nuevo icono*/
 .icon {
   max-width: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
   border-radius: 0.5rem;
-}
-
-.flechita {
-  border-radius: 0.5rem;
-  max-width: 4rem;
 }
 
 .iconobar {
@@ -21,9 +24,125 @@ html {
   height: 5rem;
 }
 
+/*Aprooveche el uso de los mixins sobre todo en el uso de las barras
+porque es donde mas se me reiteraba codigo, lo implemente tambien
+para centrar las imagenes en distintas paginas */ /*Aca decidi incorporar todos los grids para evitar que los demas scss quedaran 
+excesivamente largos, ademas lo mezcle un poco con mixin de imagenes ahorrandome 
+un poco de codigo, es bastante comodo*/
+/* grids del index */
+.griddiv {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(8, auto);
+  grid-template-areas: "A A" "B C" "A1 A1" "B1 B1" "A2 D" "B2 D" "A3 D" "B3 D";
+}
+
+.titulo1 {
+  grid-area: A;
+}
+
+.textoizquierda {
+  grid-area: B;
+}
+
+.paciente {
+  grid-area: C;
+}
+
+.titulo2 {
+  grid-area: A1;
+}
+
+.textocentrado {
+  grid-area: B1;
+}
+
+.titulo3 {
+  grid-area: A2;
+}
+
+.textoizquierda1 {
+  grid-area: B2;
+}
+
+.titulo4 {
+  grid-area: A3;
+}
+
+.textoizquierda2 {
+  grid-area: B3;
+}
+
+.medicacion {
+  grid-area: D;
+}
+
+@media (max-width: 991px) {
+  .griddiv {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "A" "B" "C" "A1" "B1" "A2" "B2" "A3" "B3" "D";
+  }
+  .imagencentrada {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*grids quienes somos*/
+.griddiv2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: "quienes quienes" "textoquienes imagenquienes";
+}
+
+.quienes {
+  grid-area: quienes;
+}
+
+.textoizquierdaquienes {
+  grid-area: textoquienes;
+}
+
+.ciencia {
+  grid-area: imagenquienes;
+}
+
+@media (max-width: 991px) {
+  .griddiv2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "quienes" "textoquienes" "imagenquienes";
+  }
+  .imagencentrada {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* aca le di formato a las imagenes*/
+.imagengeneral {
+  width: 30rem;
+  padding-right: 2rem;
+}
+
+.farmacia {
+  height: 25rem;
+  margin-top: 6rem;
+}
+
+/*Aprooveche el uso de los mixins sobre todo en el uso de las barras
+porque es donde mas se me reiteraba codigo, lo implemente tambien
+para centrar las imagenes en distintas paginas */
 /*nav*/
+/* necesitaba el header por encima del nav en para que al apretar la animacion
+de flechita la pagina llegara arriba de todo asi que hice uso del position
+absolute en este caso*/
 header {
-  background-color: black;
+  position: absolute;
+  top: 0;
 }
 header nav div img {
   width: 10rem;
@@ -36,17 +155,30 @@ header nav ul li {
   font-size: 2.5rem;
 }
 
+#activo {
+  color: rgb(12, 213, 32);
+  border-bottom: red;
+  border-bottom-width: 0.3rem;
+  border-bottom-style: solid;
+}
+
+/*lo estuve probando en el telefono y la verdad
+que el nav quedaba gigante asi que decidi poner a 
+la mitad el img para mobile*/
+@media (max-width: 991px) {
+  /*despliegue del menu a pantalla completa*/
+  #menu {
+    height: 100vh;
+  }
+  header nav div img {
+    width: 5rem;
+    margin-left: 4rem;
+  }
+}
 /*footer*/
-/*aca hice la implementacion de grids, para que quedaran alineados como queria
-los iconos de subir con los vinculos de las redes y "derechos"
-ademas los pude alinear combinandolo con flexbox
-creo que el footer me ayudo a entender lo genial de combinar ambas tecnologias
-se que es una "pavada" pero lo puedo llevar a otros items en proyectos futuros
-*/
 footer {
   background-color: rgb(127, 118, 105);
   margin-top: 2em;
-  width: 100%;
   font-size: 1.5rem;
 }
 
@@ -57,22 +189,24 @@ footer {
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
 }
-
-.redes {
+.gridfoot a {
+  text-decoration: none;
+  color: black;
+}
+.gridfoot .redes {
   grid-column-start: 1;
   display: flex;
   align-items: flex-end;
+  padding-left: 2rem;
 }
-
-.derechos {
+.gridfoot .derechos {
   grid-column-start: 2;
-  grid-row-start: 3;
+  grid-row-start: 2;
   display: flex;
   justify-content: flex-end;
   padding-right: 0.5em;
 }
-
-.subir {
+.gridfoot .subir {
   grid-column-start: 2;
   grid-row-start: 1;
   display: flex;
@@ -80,48 +214,54 @@ footer {
   padding-right: 0.5em;
   padding-top: 0.5em;
 }
-
-#pie a {
-  text-decoration: none;
-  color: black;
+.gridfoot .subir .flechita {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid black;
+  animation-name: paraarriba;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
 }
 
+/*Consegui el objetivo de centrado!
+*/
 @media (max-width: 991px) {
   .gridfoot {
     display: grid;
     grid-template-columns: auto;
     gap: 1em;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
   }
-  .redes {
-    grid-column-start: 1;
+  .gridfoot .gridfootred {
     display: flex;
-    justify-content: center;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: flex-start;
   }
-  .subir {
+  .gridfoot .subir {
     grid-column-start: 1;
-    display: flex;
-    justify-content: right;
     padding-right: 0.5em;
     padding-top: 0.5em;
   }
-  .derechos {
+  .gridfoot .derechos {
     grid-column-start: 1;
-    grid-row-start: 5;
+    padding-right: 0;
+    grid-row-start: 3;
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
   }
 }
 /*barra de busqueda interacciones*/
 .busquedainteracciones {
   display: grid;
-  grid-template-columns: 2fr 1fr;
   font-size: 2rem;
-  padding-bottom: 10em;
-  padding-top: 6em;
+  padding-bottom: 25em;
+  padding-top: 6rem;
   margin-left: 0.5em;
   margin-right: 0.5em;
+  grid-template-columns: 2fr 1fr;
 }
 .busquedainteracciones .barrainter {
   grid-column-start: 1;
@@ -132,7 +272,6 @@ footer {
   padding-left: 5%;
 }
 .busquedainteracciones .barrainter input {
-  width: 90%;
   height: 3em;
   border-top-left-radius: 2em;
   border-bottom-left-radius: 2em;
@@ -140,6 +279,7 @@ footer {
   border-color: black;
   text-indent: 1rem;
   border-right-style: none;
+  width: 90%;
 }
 .busquedainteracciones .barrainter button {
   height: 3em;
@@ -184,18 +324,17 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     font-size: 1.4rem;
-    padding-bottom: 10em;
+    padding-bottom: 20em;
     padding-top: 6em;
   }
   .busquedainteracciones .barrainter {
     grid-column-start: 1;
     grid-row-start: 3;
-    padding-top: 3rem;
+    padding-top: 2rem;
     padding-left: 5rem;
     padding-right: 5rem;
   }
   .busquedainteracciones .barrainter input {
-    width: 90%;
     height: 3em;
     border-top-left-radius: 2em;
     border-bottom-left-radius: 2em;
@@ -203,6 +342,7 @@ footer {
     border-color: black;
     text-indent: 1rem;
     border-right-style: none;
+    width: 90%;
   }
   .busquedainteracciones .barrainter button {
     height: 3em;
@@ -236,12 +376,12 @@ footer {
 /*barra de busqueda vademecum*/
 .busquedavademecum {
   display: grid;
-  grid-template-columns: 1fr;
-  font-size: 1.8rem;
-  padding-bottom: 10em;
-  padding-top: 6em;
+  font-size: 2rem;
+  padding-bottom: 25em;
+  padding-top: 6rem;
   margin-left: 0.5em;
   margin-right: 0.5em;
+  grid-template-columns: 1fr;
 }
 .busquedavademecum .barravademecum {
   grid-column-start: 1;
@@ -251,10 +391,9 @@ footer {
   align-items: flex-end;
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 5%;
+  padding-top: 2.5%;
 }
 .busquedavademecum .barravademecum input {
-  width: 80%;
   height: 3em;
   border-top-left-radius: 2em;
   border-bottom-left-radius: 2em;
@@ -262,6 +401,7 @@ footer {
   border-color: black;
   text-indent: 1rem;
   border-right-style: none;
+  width: 80%;
 }
 .busquedavademecum .barravademecum button {
   height: 3em;
@@ -281,9 +421,7 @@ footer {
   grid-column-start: 1;
   grid-row-start: 1;
   display: flex;
-  position: relative;
-  left: 45%;
-  right: 55%;
+  justify-content: center;
 }
 .busquedavademecum #descargar {
   grid-column-start: 1;
@@ -294,25 +432,23 @@ footer {
   padding-right: 15%;
 }
 
-/*El normalizer esta incluido en el css de boostrap*/
-/* esto lo use para que el menu se despliegue completamente
-vi que se puede obtener el mismo resultado modificando el js de bootsrap
-pero no quise modificarlo sin entender que estoy haciendo */
-@media (max-width: 991px) {
-  #menu {
-    height: 100vh;
+/*decidi hacer una animacion sutil que me parecio copada para no
+realizar el tipico href a una imagen o gif para usarlo de flechita*/
+@keyframes paraarriba {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
-#activo {
-  color: rgb(12, 213, 32);
-  border-bottom: red;
-  border-bottom-width: 0.3rem;
-  border-bottom-style: solid;
-}
-
+/*El normalizer esta incluido en el css de boostrap*/
 /*body*/
 section {
-  padding-top: 14em;
+  margin-top: 14rem;
 }
 section a {
   text-decoration: none;
@@ -320,14 +456,19 @@ section a {
   line-height: 2rem;
   color: blue;
 }
-section h1 {
-  text-align: center;
+section article {
+  display: grid;
+}
+section article h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   font-size: 3.6rem;
   color: red;
   font-family: "roboto";
 }
-section article {
-  display: grid;
+section article .sinindentado {
+  text-indent: 0;
 }
 section article iframe {
   display: block;
@@ -342,6 +483,7 @@ section article p {
   text-align: justify;
   font-family: "helvetica";
   padding: 0.5em;
+  padding-left: 1em;
   text-indent: 1.5em;
   line-height: 1.4em;
 }
@@ -356,27 +498,28 @@ section article h2 {
   font-size: 3rem;
   text-align: center;
   padding: 0.5em;
-  margin-top: 2.5em;
+  margin-top: 1.8em;
 }
 
-/*tuve que aplicar este querie porque en 320 se me rompia el titulo*/
-@media (max-width: 325px) {
-  article {
+/*con este querie ajuste la distancia de los titulos con el nav y en p el text align justify
+que se veia mal en resolucion mobile, probe el deploy de git pages en el celu*/
+@media (max-width: 991px) {
+  section {
+    margin-top: 7em;
+  }
+  section article {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
+  section article h1 {
+    text-align: center;
+  }
+  section article p {
+    padding-left: 0.5em;
+    text-align: start;
+    padding-right: 0.5em;
+  }
 }
-/*quienes somos*/
-/*se ve un poco esteril, pero no tengo imaginacion*/
-.quienessomos {
-  font-size: 1.8rem;
-  text-align: justify;
-  padding: 0.5em;
-  text-indent: 1.5rem;
-  line-height: 4rem;
-  list-style: square;
-}
-
 /*contacto*/
 .obligatorio {
   color: red;

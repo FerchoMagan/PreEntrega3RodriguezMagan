@@ -1,56 +1,58 @@
 $fuentehelv : 'helvetica';
 
+
+/*en el main decidi poner solo estilos de sections p h1 etc para que 
+me resulte mas comodo el manejo de estilos, fueron agregados todos los
+imports necesarios para que se conecten una vez compilado scss*/
+
+
 html {
     font-size: 62.5%;
 }
-@import 'iconos';
-@import 'layout';
-@import 'barrainteraccion';
-@import 'barravademecum';
+
+@import 'imports/iconos';
+@import 'imports/gridspaginas';
+@import 'imports/imagenes';
+@import 'imports/mixins';
+@import 'imports/layout';
+@import 'imports/barrainteraccion';
+@import 'imports/barravademecum';
+@import 'imports/keyframes';
 
 /*El normalizer esta incluido en el css de boostrap*/
 
 
 
-/* esto lo use para que el menu se despliegue completamente
-vi que se puede obtener el mismo resultado modificando el js de bootsrap
-pero no quise modificarlo sin entender que estoy haciendo */
-
-@media (max-width: 991px) {
-    #menu {
-        height: 100vh;
-    }
-}
-
-#activo {
-    color: rgb(12, 213, 32);
-    border-bottom: red;
-    border-bottom-width: 0.3rem;
-    border-bottom-style: solid;
-}
-
 /*body*/
 
 section {
-    padding-top: 14em;
+
+    margin-top: 14rem;
 
     a {
         text-decoration: none;
         font-size: 1.8rem;
         line-height: 2rem;
         color: blue;
-
     }
 
-    h1 {
-        text-align: center;
-        font-size: 3.6rem;
-        color: red;
-        font-family: "roboto";
-    }
+
 
     article {
         display: grid;
+
+        h1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 3.6rem;
+            color: red;
+            font-family: "roboto";
+        }
+
+        .sinindentado {
+            text-indent: 0;
+        }
 
         iframe {
             display: block;
@@ -66,8 +68,11 @@ section {
             text-align: justify;
             font-family: $fuentehelv;
             padding: 0.5em;
+            padding-left: 1em;
             text-indent: 1.5em;
             line-height: 1.4em;
+
+
         }
 
         h3 {
@@ -82,35 +87,39 @@ section {
             font-size: 3rem;
             text-align: center;
             padding: 0.5em;
-            margin-top: 2.5em;
+            margin-top: 1.8em;
         }
     }
 }
 
 
 
-/*tuve que aplicar este querie porque en 320 se me rompia el titulo*/
-@media (max-width: 325px) {
-    article {
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
+/*con este querie ajuste la distancia de los titulos con el nav y en p el text align justify
+que se veia mal en resolucion mobile, probe el deploy de git pages en el celu*/
+@media (max-width: 991px) {
+    section {
+        margin-top: 7em;
+
+        article {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+
+            h1 {
+                text-align: center;
+            }
+
+            p {
+                padding-left: 0.5em;
+                text-align: start;
+                padding-right: 0.5em;
+            }
+        }
 
     }
+
+
 }
 
-
-/*quienes somos*/
-
-/*se ve un poco esteril, pero no tengo imaginacion*/
-
-.quienessomos {
-    font-size: 1.8rem;
-    text-align: justify;
-    padding: 0.5em;
-    text-indent: 1.5rem;
-    line-height: 4rem;
-    list-style: square;
-}
 
 /*contacto*/
 

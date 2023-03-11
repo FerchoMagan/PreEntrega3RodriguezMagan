@@ -1,0 +1,8 @@
+/*decidi hacer una animacion sutil que me parecio copada para no
+realizar el tipico href a una imagen o gif para usarlo de flechita*/
+
+@keyframes paraarriba {
+    0% {transform: translate(0,0);}
+    50%{transform: translate(0px,5px);}
+    100%{transform: translate(0,0);}
+}

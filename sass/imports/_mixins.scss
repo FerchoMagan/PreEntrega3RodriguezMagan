@@ -1,0 +1,36 @@
+/*Aprooveche el uso de los mixins sobre todo en el uso de las barras
+porque es donde mas se me reiteraba codigo, lo implemente tambien
+para centrar las imagenes en distintas paginas */
+
+@mixin barras {
+    display: grid;
+    font-size: 2rem;
+    padding-bottom: 25em;
+    padding-top: 6rem;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+@mixin imagenescentro {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin inputbarras {
+    height: 3em;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border-style: solid;
+    border-color: black;
+    text-indent: 1rem;
+    border-right-style: none;
+}
+
+@mixin buttonbarras {
+    height: 3em;
+    width: 3em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+}

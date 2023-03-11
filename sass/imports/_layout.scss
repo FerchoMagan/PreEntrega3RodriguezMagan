@@ -1,0 +1,138 @@
+/*nav*/
+/* necesitaba el header por encima del nav en para que al apretar la animacion
+de flechita la pagina llegara arriba de todo asi que hice uso del position
+absolute en este caso*/
+ header {
+        position: absolute;
+        top: 0;
+    nav {
+        div img {
+            width: 10rem;
+            margin-left: 4rem;
+        }
+
+        ul {
+            margin-left: 4em;
+
+            li {
+                font-size: 2.5rem;
+            }
+        }
+
+    }
+ }
+ 
+ #activo {
+    color: rgb(12, 213, 32);
+    border-bottom: red;
+    border-bottom-width: 0.3rem;
+    border-bottom-style: solid;
+}
+/*lo estuve probando en el telefono y la verdad
+que el nav quedaba gigante asi que decidi poner a 
+la mitad el img para mobile*/
+@media (max-width: 991px) {
+
+    /*despliegue del menu a pantalla completa*/
+    #menu {
+        height: 100vh;
+    }
+
+   header nav div img {
+        width: 5rem;
+        margin-left: 4rem;
+    }
+}
+
+/*footer*/
+
+footer {
+    background-color: rgb(127, 118, 105);
+    margin-top: 2em;
+    font-size: 1.5rem;
+}
+
+.gridfoot {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .redes {
+        grid-column-start: 1;
+        display: flex;
+        align-items: flex-end;
+        padding-left: 2rem;
+
+    }
+
+    .derechos {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 0.5em;
+
+    }
+
+    .subir {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        display: flex;
+        justify-content: right;
+        padding-right: 0.5em;
+        padding-top: 0.5em;
+
+        .flechita {
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 30px solid black;
+            animation-name: paraarriba;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+        }
+    }
+}
+
+/*Consegui el objetivo de centrado!
+*/
+
+@media (max-width: 991px) {
+
+    .gridfoot {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1em;
+
+        .gridfootred {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            align-items: flex-start;
+        }
+
+        .subir {
+            grid-column-start: 1;
+            padding-right: 0.5em;
+            padding-top: 0.5em;
+        }
+
+        .derechos {
+            grid-column-start: 1;
+            padding-right: 0;
+            grid-row-start: 3;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+
+        }
+    }
+}
